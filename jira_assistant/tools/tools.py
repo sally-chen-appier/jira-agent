@@ -48,7 +48,7 @@ try:
                         'https://mcp.atlassian.com/v1/sse',
                         "--jira-url=https://appier.atlassian.net/",
                         "--jira-username=sally.cheng@appier.com",
-                        "--jira-token=ATATT3xFfGF0gq5X4ZoVMD0Aj20w7KyCNB5lhCwwtFvXbfTzEXdohraoxl6TcvcL_WA6a_fE-fjChonXYyWutqhyIzc3Pow8vYbX18UKHMDnn6Gnt7sdUoPZHANUV-iDw_mDJLaREw51BzrT4SEjTp8W62OoCzFXu8O13LmL5O5HOanWxVkJSGs=5169ABD7"
+                        "--jira-token={JIRA_TOKEN}"
                     ],
                 ),
                 timeout=300 
