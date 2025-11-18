@@ -86,16 +86,15 @@ verify your `.env` was set up correctly.
 
 ## Run the services locally
 1. Iniciate virtual environment
-  ```bash
-  source .venv/bin/activate
-  ```
+    ```bash
+    source .venv/bin/activate
+    ```
 1. Through the CLI (`adk run`):
 
     ```bash
     adk run jira_assistant
     ```
-
-2. Through the web interface (`adk web`):
+1. Through the web interface (`adk web`):
 
     ```bash
     adk web
