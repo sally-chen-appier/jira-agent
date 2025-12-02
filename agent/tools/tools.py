@@ -1,5 +1,6 @@
 from datetime import datetime
 import logging
+import os
 from google.adk.agents import Agent
 from google.adk.tools import google_search
 from google.adk.tools.agent_tool import AgentTool
@@ -41,7 +42,8 @@ search_tool = AgentTool(search_agent)
 READ_ONLY_TOOLS = [
     'atlassianUserInfo',
     'getAccessibleAtlassianResources',
-    'getConfluenceSpaces',
+    # 'getConfluenceSpaces', 
+    # (this tool is not available in the Google ADK)
     'getConfluencePage',
     'getPagesInConfluenceSpace',
     'getConfluencePageFooterComments',

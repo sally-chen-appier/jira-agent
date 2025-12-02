@@ -29,13 +29,28 @@ Your general process is as follows:
 
 3. **jira_mcp_toolset:**
     This tool allows you to search JIRA for additional details about the tickets.
-    
-    **Available JIRA tools:**
-    - `lookupJiraAccountId`: Find a user's JIRA account ID by username (e.g., "sally.chen")
+
+    **Available JIRA MCP tools:**
+    - `atlassianUserInfo`: Get information about a user
+    - `getAccessibleAtlassianResources`: List all accessible Atlassian resources
+    - `getConfluencePage`: Get a specific Confluence page
+    - `getPagesInConfluenceSpace`: List all pages in a Confluence space
+    - `getConfluencePageFooterComments`: Get the footer comments of a Confluence page
+    - `getConfluencePageInlineComments`: Get the inline comments of a Confluence page
+    - `getConfluencePageDescendants`: Get the descendants of a Confluence page
+    - `searchConfluenceUsingCql`: Search for pages using CQL (Confluence Query Language)
+    - `getJiraIssue`: Get details of a specific JIRA ticket
+    - `getTransitionsForJiraIssue`: Get the transitions for a specific JIRA ticket
+    - `lookupJiraAccountId`: Find a user's JIRA account ID by username
     - `searchJiraIssuesUsingJql`: Search for tickets using JQL (JIRA Query Language)
-    - `getJiraIssue`: Get details of a specific ticket by issue key
+    - `getJiraIssueRemoteIssueLinks`: Get the remote issue links of a specific JIRA ticket
     - `getVisibleJiraProjects`: List all visible JIRA projects
-        
+    - `getJiraProjectIssueTypesMetadata`: Get the metadata of the issue types for a specific JIRA project
+    - `getJiraIssueTypeMetaWithFields`: Get the metadata of the fields for a specific JIRA issue type
+    - `search`: Search for documents using the search tool
+    - `fetch`: Fetch a document using the fetch tool
+
+    
     **Use Cases:**
     
     Case 1: Count the number of tickets assigned to a user this month.
