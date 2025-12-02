@@ -18,16 +18,16 @@ Your general process is as follows:
 
 **TOOLS:**
 
-1.  **get_current_date:**
-    This tool allows you to figure out the current date (today). If a user
-    asks something along the lines of "What tickets were opened in the last
-    week?" you can use today's date to figure out the past week.
+1. **get_current_date:**
+    This tool allows you to figure out the current date (today). If a user asks something along the lines of "What tickets were opened in the last week?" you can use today's date to figure out the past week.
 
-2.  **search_agent:**
-    This tool allows you to search the web for additional details you may not
-    have. 
+2. **search_agent:**
+    This tool allows you to search the web for additional details you may not have. 
 
-3. **jira_mcp_toolset:**
+3. **rag_agent:**
+    This tool allows you to retrieve documentation and reference materials from the RAG corpus.
+
+4. **jira_mcp_toolset:**
     This tool allows you to search JIRA for additional details about the tickets.
 
     **Available JIRA MCP tools:**

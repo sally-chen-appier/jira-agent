@@ -1,11 +1,11 @@
 from google.adk.agents import Agent
 
 from .prompt import agent_instruction
-from .tools.tools import get_current_date, search_tool, jira_mcp_toolset
+from .tools.tools import get_current_date, search_tool, jira_mcp_toolset, rag_tool
 
 
 # Build tools list, filtering out empty/None values
-tools = [get_current_date, search_tool]
+tools = [get_current_date, search_tool, rag_tool]
 if jira_mcp_toolset is not None:  # Only add if not None
     tools.append(jira_mcp_toolset)
 
