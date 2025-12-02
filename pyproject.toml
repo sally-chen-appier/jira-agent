@@ -1,5 +1,5 @@
 [project]
-name = "software-bug-assistant"
+name = "jira-assistant"
 version = "0.1.0"
 description = "Software bug assistant using ADK"
 authors = [{ name = "Jack Wotherspoon", email = "jackwoth@google.com" }]
@@ -51,7 +51,7 @@ select = [
 ignore = ["E501", "C901"] # ignore line too long, too complex
 
 [tool.ruff.lint.isort]
-known-first-party = ["software_bug_assistant"]
+known-first-party = ["jira_assistant"]
 
 [tool.mypy]
 disallow_untyped_calls = true
@@ -92,4 +92,4 @@ module-root = ""
 example_question = "Can you help me debug a login page issue?"
 
 [tool.agent-starter-pack.settings]
-agent_directory = "software_bug_assistant"
+agent_directory = "jira_assistant"
