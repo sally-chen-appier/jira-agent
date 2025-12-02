@@ -32,8 +32,36 @@ search_agent = Agent(
 search_tool = AgentTool(search_agent)
 
 # ----- Jira MCP Tool -----
+# Read-only tools only - filtering out all write operations
+# Write operations that are excluded:
+# - createConfluencePage, updateConfluencePage
+# - createConfluenceFooterComment, createConfluenceInlineComment
+# - editJiraIssue, createJiraIssue
+# - transitionJiraIssue, addCommentToJiraIssue
+READ_ONLY_TOOLS = [
+    'atlassianUserInfo',
+    'getAccessibleAtlassianResources',
+    'getConfluenceSpaces',
+    'getConfluencePage',
+    'getPagesInConfluenceSpace',
+    'getConfluencePageFooterComments',
+    'getConfluencePageInlineComments',
+    'getConfluencePageDescendants',
+    'searchConfluenceUsingCql',
+    'getJiraIssue',
+    'getTransitionsForJiraIssue',
+    'lookupJiraAccountId',
+    'searchJiraIssuesUsingJql',
+    'getJiraIssueRemoteIssueLinks',
+    'getVisibleJiraProjects',
+    'getJiraProjectIssueTypesMetadata',
+    'getJiraIssueTypeMetaWithFields',
+    'search',
+    'fetch',
+]
+
 try: 
-    mcp_tools = MCPToolset(
+    jira_mcp_toolset = MCPToolset(
             connection_params=StdioConnectionParams(
                 server_params=StdioServerParameters(
                     command='npx',
@@ -42,15 +70,14 @@ try:
                         'mcp-remote',
                         'https://mcp.atlassian.com/v1/sse',
                         "--jira-url=https://appier.atlassian.net/",
-                        "--jira-username=sally.cheng@appier.com",
                         "--jira-token={JIRA_TOKEN}"
                     ],
                 ),
                 timeout=300 
             ),
-            # tool_filter=['getConfluenceSpaces', 'getConfluencePage']
+            tool_filter=READ_ONLY_TOOLS  # Only allow read-only operations
         )
 
 except Exception as e:
-    mcp_tools = None
+    jira_mcp_toolset = None
     logging.error("Failed to initialize Jira MCP tools: %s", e)

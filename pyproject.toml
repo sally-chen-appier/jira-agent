@@ -1,8 +1,8 @@
 [project]
-name = "jira-assistant"
+name = "agent"
 version = "0.1.0"
-description = "Software bug assistant using ADK"
-authors = [{ name = "Jack Wotherspoon", email = "jackwoth@google.com" }]
+description = "Jira and Confluence Agent for Appier"
+authors = [{ name = "Sally Chen", email = "sally.chen@appier.com" }]
 license = "Apache-2.0"
 readme = "README.md"
 requires-python = ">=3.10,<3.13"

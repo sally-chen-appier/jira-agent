@@ -92,7 +92,7 @@ verify your `.env` was set up correctly.
 1. Through the CLI (`adk run`):
 
     ```bash
-    adk run jira_assistant
+    adk run agent
     ```
 1. Through the web interface (`adk web`):
 
